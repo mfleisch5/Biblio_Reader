@@ -106,7 +106,7 @@ class Assignment(object):
         """
         articles = []
         for member in self.members:
-            articles += member.articles
+            articles.extend(member.articles)
         assignment = [item for item, count in collections.Counter(articles).items() if count == 1]
         member_length = math.ceil((len(articles) + len(assignment)) / len(self.members))
         revert = None
@@ -135,7 +135,7 @@ class Assignment(object):
         if 1 in test_type:
             articles = []
             for member in self.members:
-                articles += member.articles
+                articles.extend(member.articles)
             print('Duplicate items:',
                   len([item for item, count in collections.Counter(articles).items() if count == 2]))
         if 2 in test_type:

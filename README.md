@@ -21,13 +21,13 @@ Manager.py is the utilities manager, and provides support for reading and writin
 
 This is also where users can enter project-specific variables including marking which publications are connected to the original work of interest, and categories of search terms with regular expressions Google Scholar may have used to find them.
 
-### [scholar](/scholar/README.md)
+### [scholar](/scholar)
 
 scholar.py is where the original Google Scholar results are compiled. (More in link)
 
-### [biblio_reader](/biblio_reader/README.md)
+### [biblio_reader](/biblio_reader)
 
-See README
+The primary analysis utilites including article assignments and review, PDF and text parsers, map and graph creation, and matplotlib visualization.
 
 ### inputs
 

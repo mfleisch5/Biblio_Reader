@@ -9,10 +9,6 @@ contributors = {author for i, authors in zip(data['i'], data['Authors']) for aut
                             if i in mg.CONTR_PAPERS}
 
 
-
-
-
-
 with open(os.path.join(mg.dir(os.path.join('data', 'author-links')), 'objects.json'), 'w') as o:
     json.dump([{'name': auth,
                 'type': "Contributor" if types[auth] is True else 'Not a Contributor',

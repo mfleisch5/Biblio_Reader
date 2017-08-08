@@ -23,8 +23,7 @@ def find_paragraphs(txt_directory, terms, outfile=None):
         paragraphs = [paragraph.lower() for paragraph in paragraphs if isinstance(paragraph, str)]
         key_paragraphs = []
         for term, pattern in terms:
-
-            key_paragraphs += {paragraph for paragraph in paragraphs if re.search(pattern, paragraph)}
+            key_paragraphs.extend({paragraph for paragraph in paragraphs if re.search(pattern, paragraph)})
         for term, pattern in terms:
             key_paragraphs = [str(re.sub(pattern, '@@@@' + term, paragraph)) for paragraph in key_paragraphs]
         res[int(file.replace('.txt', ''))] = key_paragraphs

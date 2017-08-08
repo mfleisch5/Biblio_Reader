@@ -1,6 +1,6 @@
 import manager as mg, os, sys, csv, collections
-data = mg.get_data()
 from biblio_reader import scholar_reader
+data = mg.get_data()
 checks = mg.dir(os.path.join(mg.INPUT_PATH, 'article_review'))
 categories = mg.dir(os.path.join(mg.INPUT_PATH, 'journal_categories'))
 if len(os.listdir(checks)) == 0:
